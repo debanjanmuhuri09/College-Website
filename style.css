@@ -1,0 +1,44 @@
+
+.header {
+    overflow: hidden;
+    background-color: yellow;
+    background-image: linear-gradient(to left, black 40%, rgba(0,0,0,0) 40%); 
+    padding: 5px;
+}
+
+.emergency-contact{
+    margin-left: 10px;
+}
+.header a{
+    float: left;
+    text-align: center;
+    color:black;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-right{
+    float: right;
+    color: aliceblue;
+}
+.fa{
+    float: left;
+}
+
+.emergency-contact:hover{
+    color: blue;
+}
+
+@media screen and (max-width: 500px) {
+    .header{
+        background-image: linear-gradient(to left, black 50%, rgba(0,0,0,0) 50%);
+    }
+    .header-left{
+        display: inline;
+    }
+    .header-right{
+        position: absolute;
+        left: 65%;
+    }
+  }
