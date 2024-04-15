@@ -4,6 +4,7 @@
     background-color: yellow;
     background-image: linear-gradient(to left, black 40%, rgba(0,0,0,0) 40%); 
     padding: 5px;
+    height: auto;
 }
 
 .emergency-contact{
@@ -29,6 +30,14 @@
 .emergency-contact:hover{
     color: blue;
 }
+.head-banner{
+    margin-left: 100px;
+}
+.banner-logo {
+    display: inline-block;
+    margin-top: 8px;
+}
+
 
 @media screen and (max-width: 500px) {
     .header{
@@ -41,4 +50,12 @@
         position: absolute;
         left: 65%;
     }
+    .head-banner{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .banner-logo img {
+        width: 100%;
+    }    
   }
