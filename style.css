@@ -1,7 +1,13 @@
-
+*{
+    margin: 0; 
+    padding: 0;
+    text-decoration: none;
+    font-family: "Open Sans";
+    box-sizing: border-box;
+}
 .header {
     overflow: hidden;
-    background-color: yellow;
+    background-color: #ffcc00;
     background-image: linear-gradient(to left, black 40%, rgba(0,0,0,0) 40%); 
     padding: 5px;
     height: auto;
@@ -15,7 +21,6 @@
     text-align: center;
     color:black;
     font-size: 16px;
-    text-decoration: none;
     font-weight: bold;
 }
 
@@ -34,9 +39,79 @@
     margin-left: 100px;
 }
 .banner-logo {
-    display: inline-block;
     margin-top: 8px;
 }
+
+.nav-bar{
+    background:#ffcc00;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+.nav-bar ul{
+    list-style: none;
+    display: flex;
+}
+
+.nav-bar ul li{
+    padding: 10px 30px;
+    position: relative;
+}
+
+.nav-bar ul li a{
+    color: black;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+.nav-bar ul li a:hover{
+    color:#f3e8be;
+}
+
+.dropdown a{
+        overflow-x: scroll;
+        white-space: nowrap;
+        width: 50px;
+}
+.nav-bar ul li:hover .dropdown{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #ffcc00;
+}
+.dropdown ul{
+    display: block;
+    margin: 10px;
+    padding: 0 5px;
+}
+
+.dropdown{
+    display: none;
+}
+
+.fas{
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+
+.dropdown ul li:hover .sub-dropdown{
+    display: block;
+    position: absolute;
+    margin-top: 0;
+    top: 0px;
+    left: 200px;
+    background-color: #ffcc00;
+}
+
+.dropdown .sub-dropdown{
+    display: none;
+}
+
 
 
 @media screen and (max-width: 500px) {
@@ -51,7 +126,7 @@
         left: 65%;
     }
     .head-banner{
-        display: block;
+        display: inline-block;
         margin-right: auto;
         margin-left: auto;
         padding-left: 10px;
