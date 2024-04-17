@@ -44,7 +44,7 @@
 
 .nav-bar{
     background:#ffcc00;
-    height: 80px;
+    height: 45px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -53,6 +53,7 @@
 }
 
 .nav-bar ul{
+
     list-style: none;
     display: flex;
 }
@@ -60,6 +61,11 @@
 .nav-bar ul li{
     padding: 10px 30px;
     position: relative;
+}
+
+.nav-bar ul li ul{
+    margin: 0;
+    padding: 0;
 }
 
 .nav-bar ul li a{
@@ -70,23 +76,28 @@
 .nav-bar ul li a:hover{
     color:#f3e8be;
 }
+.nav-bar ul li:hover{
+    background: #ffcc00;
+}
 
 .dropdown a{
         overflow-x: scroll;
         white-space: nowrap;
-        width: 50px;
+        width: 5px;
 }
 .nav-bar ul li:hover .dropdown{
     display: block;
     position: absolute;
+    z-index: 999;
     left: 0;
     top: 100%;
-    background-color: #ffcc00;
+    background-color: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 .dropdown ul{
     display: block;
     margin: 10px;
-    padding: 0 5px;
+    padding: 0 10px;
 }
 
 .dropdown{
@@ -99,17 +110,57 @@
     padding-top: 3px;
 }
 
-.dropdown ul li:hover .sub-dropdown{
+.dropdown ul li:hover .sub-dropdown,.dropdown ul li:hover .sub-dropdown-1,.dropdown ul li:hover .sub-dropdown-3,.dropdown ul li:hover .sub-dropdown-4{
     display: block;
     position: absolute;
     margin-top: 0;
     top: 0px;
     left: 200px;
-    background-color: #ffcc00;
+    z-index: 999;
+    background-color: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
-.dropdown .sub-dropdown{
+.dropdown .sub-dropdown,.dropdown .sub-dropdown-1,.dropdown .sub-dropdown-3,.dropdown .sub-dropdown-4{
     display: none;
+}
+
+.container {
+    display: flex;  /* Make container a flex container */
+    width: fit-content;
+    overflow: show;
+}
+
+.announcement {
+    background-color: yellow;
+    color: black;
+    padding: 10px;
+    margin-right: 10px;  /* Add margin for spacing */
+    /* Order set to 1 to display announcement first */
+    order: 1;
+}
+
+.news-wrapper {
+  display: flex;
+  /* Order set to 2 to display news-wrapper behind announcement */
+  order: 2;
+}
+
+.trick-element {
+  width: 100%;  /* Width equal to container */
+}
+
+.news-bulletin {
+    display: flex;
+    flex-direction: row;
+    animation: scroll 20s linear infinite;
+    white-space: nowrap;
+    /*background-color: lightblue;  Added background color */
+}
+
+@keyframes scroll {
+    0% { transform: translateX(calc(100% + 100vw)); }  /* Starts far right */
+    100% { transform: translateX(-100%);}
 }
 
 
