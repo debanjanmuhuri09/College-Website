@@ -11,36 +11,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="javascript" href="script.js">
     
 </head>
 <body>
-    <div class="header">
-        <div style="margin-left: 100px;" class="header-left">
-            <i style="font-size:20px" class="fa">&#xf095;</i>
-            <a class="emergency-contact" href="tel:+919830123456">9830123456</a>
+    <div class="Home-page">
+        <div class="header">
+            <div style="margin-left: 100px;" class="header-left">
+                
+                <a class="emergency-contact" href="tel:+919830123456">9830123456</a>
+            </div>
+            
+            <div style="margin-right: 100px;" class="header-right">
+                <label for="Quick-links">
+                    <select name="Quick" id="Quick-links">
+                        <option selected>Quick Links</option>
+                        <option value="https://makautexam.net/">makautexam</option>
+                    </select>
+                </label>
+            </div>
         </div>
-        
-        <div style="margin-right: 100px;" class="header-right">
-            <label for="Quick-links">
-                <select name="Quick" id="Quick-links">
-                    <option selected>Quick Links</option>
-                    <option value="https://makautexam.net/">makautexam</option>
-                </select>
-            </label>
+        <div class="head-banner">
+            <div class="banner-logo">
+                <a href="index.html">
+                    <img src="https://aot.edu.in/wp-content/uploads/2017/02/Logo.jpg" alt="Aot-logo">
+                </a>
+            </div>
         </div>
-    </div>
-    <div class="head-banner">
-        <div class="banner-logo">
-            <a href="index.html">
-                <img src="https://aot.edu.in/wp-content/uploads/2017/02/Logo.jpg" alt="Aot-logo">
-            </a>
-        </div>
-    </div>
-
-        <div class="nav-bar">
+    
+            <nav class="nav-bar">
                 <ul>
                     <li><a href="index.html">Home <i class="fas fa-home"></i></a></li>
-                    <li><a href="#">Academics <i class="fas fa-caret-down"></i></a>
+                    <li class="hideonMobile"><a href="#">Academics <i class="fas fa-caret-down"></i></a>
                         <div class="dropdown">
                             <ul>
                                 <li><a href="#">Study @ AOT <i class="fas fa-caret-right"></i></a>
@@ -77,7 +79,7 @@
                             </ul> 
                         </div>
                     </li>
-                    <li><a href="#">Research <i class="fas fa-caret-down"></i></a>
+                    <li class="hideonMobile"><a href="#">Research <i class="fas fa-caret-down"></i></a>
                         <div class="dropdown">
                             <ul>
                                 <li><a href="#">Current Research</a></li>
@@ -86,7 +88,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="#">Students <i class="fas fa-caret-down"></i></a>
+                    <li class="hideonMobile"><a href="#">Students <i class="fas fa-caret-down"></i></a>
                         <div class="dropdown">
                             <ul>
                                 <li><a href="#">Life @ AOT</a></li>
@@ -96,7 +98,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="#">Faculty<i class="fas fa-caret-down"></i></a>
+                    <li class="hideonMobile"><a href="#">Faculty<i class="fas fa-caret-down"></i></a>
                         <div class="dropdown">
                             <ul>
                                 <li><a href="#">Faculty List</a></li>
@@ -105,8 +107,8 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="#">Career @ AOT</a></li>
-                    <li><a href="#">About <i class="fas fa-caret-down"></i></a>
+                    <li class="hideonMobile"><a href="#">Career @ AOT</a></li>
+                    <li class="hideonMobile"><a href="#">About <i class="fas fa-caret-down"></i></a>
                         <div class="dropdown">
                             <ul>
                                 <li><a href="#">Overview</a></li>
@@ -121,25 +123,112 @@
                             </ul>
                         </div>
                     </li>
+                    
                 </ul>
-            
-        </div>
-        <div class="container">
-            <div class="announcement">Announcement</div>
-            <div class="news-wrapper">
-                <div class="trick-element"></div>
-                <div class="news-bulletin">
-                    <p>This is the first news item.</p>
-                    <p>&nbsp&nbsp|&nbsp&nbsp</p>
-                    <p>This is the second news item.</p>
-                    <p>&nbsp&nbsp|&nbsp&nbsp</p>
-                    <p>This is the third news item, and so on...</p>
-                    <p>&nbsp&nbsp|&nbsp&nbsp</p>
-                </div>
-            </div>
-        </div>
-    
-    
+                <li class="menu-button" style="list-style:none;" class="menu-button" onclick= showSideBar()><a  href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </nav>
 
+            <nav style="height: 0px;" class="side-nav">
+                <ul class="side-bar">
+                    <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                    <li class="home-icon"><a href="index.html">Home <i class="fas fa-home"></i></a></li>
+                    <li onclick=openmenu1()><a href="#">Academics <i class="fas fa-caret-down"></i></a>
+                        <div class="side-dropdown" id="Academics-btn">
+                            <ul>
+                                <li ><a href="#">Study @ AOT <i class="fas fa-caret-right"></i></a>
+                                    <ul class="sub-dropdown">
+                                        <li><a href="#">Undergraduate Programmes</a></li>
+                                        <li><a href="#">Postgraduate Programmes</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Departments <i class="fas fa-caret-right"></i></a>
+                                    <ul class="sub-dropdown-1">
+                                        <li><a href="#">Computer Science and Engineering</a></li>
+                                        <li><a href="#">Electronics and Communication Engineering</a></li>
+                                        <li><a href="#">Computer Science and Business Studies</a></li>
+                                        <li><a href="#">Electrical and Electronics Engineering </a></li>
+                                        <li><a href="#">Electrical Engineering</a></li>
+                                        <li><a href="#">Mechanical Engineering</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Program Structure</a></li>
+                                <li><a href="#">Regulations</a></li>
+                                <li><a href="#">Curriculam</a></li>
+                                <li><a href="#">Resources  <i class="fas fa-caret-right"></i></a>
+                                    <ul class="sub-dropdown-3">
+                                        <li><a href="#">Library</a></li>
+                                        <li><a href="#">Moodle</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Admission <i class="fas fa-caret-right"></i></a>
+                                    <ul class="sub-dropdown-4">
+                                        <li><a href="#">UG Admission</a></li>
+                                        <li><a href="#">PG Admission</a></li>
+                                    </ul>
+                                </li>
+                            </ul> 
+                        </div>
+                    </li>
+                    <li onclick=openmenu2()><a href="#">Research <i class="fas fa-caret-down"></i></a>
+                        <div class="side-dropdown">
+                            <ul>
+                                <li><a href="#">Current Research</a></li>
+                                <li><a href="#">Past Research</a></li>
+                                <li><a href="#">Research Facilities </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li onclick=openmenu3()><a href="#">Students <i class="fas fa-caret-down"></i></a>
+                        <div class="side-dropdown">
+                            <ul>
+                                <li><a href="#">Life @ AOT</a></li>
+                                <li><a href="#">Campus Facilities</a></li>
+                                <li><a href="#">Career Services</a></li>
+                                <li><a href="#">Events</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li onclick=openmenu4()><a href="#">Faculty<i class="fas fa-caret-down"></i></a>
+                        <div class="side-dropdown">
+                            <ul>
+                                <li><a href="#">Faculty List</a></li>
+                                <li><a href="#">Faculty Positions</a></li>
+                                <li><a href="#">Career Benefits@AOT</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li onclick=openmenu5()><a href="#">Career @ AOT</a></li>
+                    <li onclick=openmenu6()><a href="#">About <i class="fas fa-caret-down"></i></a>
+                        <div class="side-dropdown">
+                            <ul>
+                                <li><a href="#">Overview</a></li>
+                                <li><a href="#">Accredition & Alliances</a></li>
+                                <li><a href="#">Google Innovation Centre</a></li>
+                                <li><a href="#">Wipro MTLC</a></li>
+                                <li><a href="#">Ranking</a></li>
+                                <li><a href="#">Board of Governors</a></li>
+                                <li><a href="#">Location</a></li>
+                                <li><a href="#">Communication Advantages</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                </ul>
+                
+            </nav>
+           
+
+    </div>
+    <script>
+        function showSideBar(){
+            const sidebar= document.querySelector('.side-bar')
+            sidebar.style.display='flex'
+        }
+        function hideSidebar(){
+            const sidebar= document.querySelector('.side-bar')
+            sidebar.style.display='none'
+        } 
+    </script>
 </body>
 </html>
