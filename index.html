@@ -41,7 +41,7 @@
     
             <nav class="nav-bar">
                 <ul>
-                    <li><a href="index.html">Home <i class="fas fa-home"></i></a></li>
+                    <li class="home-icon"><a href="index.html">Home <i class="fas fa-home"></i></a></li>
                     <li class="hideonMobile"><a href="#">Academics <i class="fas fa-caret-down"></i></a>
                         <div class="dropdown">
                             <ul>
@@ -125,18 +125,18 @@
                     </li>
                     
                 </ul>
-                <li class="menu-button" style="list-style:none;" class="menu-button" onclick= showSideBar()><a  href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                <li class="menu-button" style="list-style:none;" class="menu-button" onclick= showSideBar() onclick="hideNavbar()"><a  href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
             </nav>
 
             <nav style="height: 0px;" class="side-nav">
                 <ul class="side-bar">
-                    <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-                    <li class="home-icon"><a href="index.html">Home <i class="fas fa-home"></i></a></li>
-                    <li onclick=openmenu1()><a href="#">Academics <i class="fas fa-caret-down"></i></a>
-                        <div class="side-dropdown" id="Academics-btn">
+                    <li onclick=hideSidebar()><a href="#"><svg style="fill: red;" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                    <li  class="menu-home" ><a href="index.html">Home <i style="top:10px" class="fas fa-home"></i></a></li>
+                    <li onclick="toggle('menu-1')" ><a href="#">Academics <i class="fas fa-caret-down"></i></a>
+                        <div id="menu-1" class="side-dropdown">
                             <ul>
-                                <li ><a href="#">Study @ AOT <i class="fas fa-caret-right"></i></a>
-                                    <ul class="sub-dropdown">
+                                <li onclick="togglesub('submenu-1')" ><a href="#">Study @ AOT <i class="fas fa-caret-right"></i></a>
+                                    <ul id="submenu-1" class="sub-dropdown">
                                         <li><a href="#">Undergraduate Programmes</a></li>
                                         <li><a href="#">Postgraduate Programmes</a></li>
                                     </ul>
@@ -169,8 +169,8 @@
                             </ul> 
                         </div>
                     </li>
-                    <li onclick=openmenu2()><a href="#">Research <i class="fas fa-caret-down"></i></a>
-                        <div class="side-dropdown">
+                    <li onclick="toggle('menu-2')" ><a href="#">Research <i class="fas fa-caret-down"></i></a>
+                        <div id="menu-2" class="side-dropdown">
                             <ul>
                                 <li><a href="#">Current Research</a></li>
                                 <li><a href="#">Past Research</a></li>
@@ -178,8 +178,8 @@
                             </ul>
                         </div>
                     </li>
-                    <li onclick=openmenu3()><a href="#">Students <i class="fas fa-caret-down"></i></a>
-                        <div class="side-dropdown">
+                    <li onclick="toggle('menu-3')"><a href="#">Students <i class="fas fa-caret-down"></i></a>
+                        <div id="menu-3" class="side-dropdown">
                             <ul>
                                 <li><a href="#">Life @ AOT</a></li>
                                 <li><a href="#">Campus Facilities</a></li>
@@ -188,8 +188,8 @@
                             </ul>
                         </div>
                     </li>
-                    <li onclick=openmenu4()><a href="#">Faculty<i class="fas fa-caret-down"></i></a>
-                        <div class="side-dropdown">
+                    <li onclick="toggle('menu-4')" ><a href="#">Faculty<i class="fas fa-caret-down"></i></a>
+                        <div id="menu-4" class="side-dropdown">
                             <ul>
                                 <li><a href="#">Faculty List</a></li>
                                 <li><a href="#">Faculty Positions</a></li>
@@ -197,9 +197,9 @@
                             </ul>
                         </div>
                     </li>
-                    <li onclick=openmenu5()><a href="#">Career @ AOT</a></li>
-                    <li onclick=openmenu6()><a href="#">About <i class="fas fa-caret-down"></i></a>
-                        <div class="side-dropdown">
+                    <li ><a href="#">Career @ AOT</a></li>
+                    <li onclick="toggle('menu-5')" ><a href="#">About <i class="fas fa-caret-down"></i></a>
+                        <div id="menu-5" class="side-dropdown">
                             <ul>
                                 <li><a href="#">Overview</a></li>
                                 <li><a href="#">Accredition & Alliances</a></li>
@@ -228,7 +228,19 @@
         function hideSidebar(){
             const sidebar= document.querySelector('.side-bar')
             sidebar.style.display='none'
-        } 
+        }
+        function toggle(id){
+            var elt =document.getElementById(id);
+            if(elt.style.display=='block'){
+                elt.style.display='none';
+            }
+            else{
+                elt.style.display='block';
+            }
+        }
+        
+        
+        
     </script>
 </body>
 </html>

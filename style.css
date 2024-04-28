@@ -243,11 +243,7 @@ body{
 .side-bar a{
     width: 100%;
 }
-.fas{
-    float:right;
-    margin-left: 10px;
-    padding-top: 3px;
-}
+
 
 @media screen and (max-width: 774px) {
     .header{
@@ -277,26 +273,26 @@ body{
     .menu-button{
         display: block;
     }
-    .home-icon{
+    .nav-bar{
+        position: relative;
+    }
+    .side-bar{
+        width: 100%;
+        position: absolute;
+    }
+    
+}
+@media (max-width:612px){
+    .side-nav{
+        position: relative;
+    }
+    .side-bar{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+    .menu-home{
         display: none;
     }
-    
 }
-@media(min-width:414px) and (max-width:800px) {
-    .side-bar{
-        width: 100%;
-    }
-    .home-icon{
-        display: block;
-    }
-}
-@media (max-width:450px){
-    .side-bar{
-        top: 87px;
-        width: 100%;
-    }
-    .home-icon{
-        display: block;
-    }
-    
-}
+
