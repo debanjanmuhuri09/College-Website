@@ -135,13 +135,13 @@
                     <li onclick="toggle('menu-1')" ><a >Academics <i class="fas fa-caret-down"></i></a>
                         <div id="menu-1" class="side-dropdown">
                             <ul>
-                                <li onclick="togglesub('submenu-1')" ><a href="#">Study @ AOT <i class="fas fa-caret-right"></i></a>
+                                <li><a href="#">Study @ AOT <i class="fas fa-caret-right"></i></a>
                                     <ul id="submenu-1" class="sub-dropdown">
                                         <li><a href="#">Undergraduate Programmes</a></li>
                                         <li><a href="#">Postgraduate Programmes</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Departments <i class="fas fa-caret-right"></i></a>
+                                <li><a>Departments <i class="fas fa-caret-right"></i></a>
                                     <ul class="sub-dropdown-1">
                                         <li><a href="#">Computer Science and Engineering</a></li>
                                         <li><a href="#">Electronics and Communication Engineering</a></li>
@@ -197,7 +197,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li ><a >Career @ AOT</a></li>
+                    <li ><a>Career @ AOT</a></li>
                     <li onclick="toggle('menu-5')" ><a >About <i class="fas fa-caret-down"></i></a>
                         <div id="menu-5" class="side-dropdown">
                             <ul>
@@ -250,15 +250,8 @@
         }
         function toggle(id){
             var elt =document.getElementById(id);
-            if(elt.style.display=='block'){
-                elt.style.display='none';
-            }
-            else{
-                elt.style.display='block';
-            }
+            elt.style.display=elt.style.display== 'block' ? 'none':'block';
         }
-        
-        
         
     </script>
 </body>
