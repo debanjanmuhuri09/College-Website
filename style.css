@@ -245,6 +245,7 @@ body{
 }
 
 
+
 @media screen and (max-width: 774px) {
     .header{
         background-image: linear-gradient(to left, black 50%, rgba(0,0,0,0) 50%);
@@ -295,4 +296,70 @@ body{
         display: none;
     }
 }
+.news-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-family: "Roboto", sans-serif;
+    box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.3);
+    padding-top: 1px;
+}
 
+.news-container .title {
+    position: absolute;
+    background: #ffcc00;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    color: black;
+    font-weight: bold;
+    z-index: 200;
+}
+
+.news-container ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    animation: scroll 25s infinite linear;
+}
+
+.news-container ul li {
+    white-space: nowrap;
+    padding: 10px 24px;
+    color: #494949;
+    position: relative;
+}
+
+.news-container ul li::after {
+    content:"";
+    width: 1px;
+    height: 100%;
+    background: #b8b8b8;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.news-container .title a{
+    color: black;
+    transition: all 0.05s;
+}
+.news-container .title a:hover{
+    color: blue;
+}
+
+.news-container ul li:last-child::after {
+    display: none;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-1083px);
+
+    }
+}
