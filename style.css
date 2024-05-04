@@ -235,6 +235,7 @@ body{
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    z-index: 999;
 }
 .side-bar li{
     width: 100%;
@@ -245,57 +246,6 @@ body{
 }
 
 
-
-@media screen and (max-width: 774px) {
-    .header{
-        background-image: linear-gradient(to left, black 50%, rgba(0,0,0,0) 50%);
-    }
-    .header-left{
-        display: inline;
-    }
-    .header-right{
-        position: absolute;
-        left: 65%;
-    }
-    .head-banner{
-        display: inline-block;
-        margin-right: auto;
-        margin-left: auto;
-        padding-left: 10px;
-    }
-    .banner-logo img {
-        width: 100%;
-    }
-}
-@media (max-width:1220px){
-    .hideonMobile{
-        display: none;
-    }
-    .menu-button{
-        display: block;
-    }
-    .nav-bar{
-        position: relative;
-    }
-    .side-bar{
-        width: 100%;
-        position: absolute;
-    }
-    
-}
-@media (max-width:612px){
-    .side-nav{
-        position: relative;
-    }
-    .side-bar{
-        position: absolute;
-        top: 0px;
-        right: 0px;
-    }
-    .menu-home{
-        display: none;
-    }
-}
 .news-container {
     position: absolute;
     left: 0;
@@ -361,5 +311,58 @@ body{
     to {
         transform: translateX(-1083px);
 
+    }
+}
+
+
+
+@media screen and (max-width: 774px) {
+    .header{
+        background-image: linear-gradient(to left, black 50%, rgba(0,0,0,0) 50%);
+    }
+    .header-left{
+        display: inline;
+    }
+    .header-right{
+        position: absolute;
+        left: 65%;
+    }
+    .head-banner{
+        display: inline-block;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 10px;
+    }
+    .banner-logo img {
+        width: 100%;
+    }
+}
+@media (max-width:1220px){
+    .hideonMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+    .nav-bar{
+        position: relative;
+    }
+    .side-bar{
+        width: 100%;
+        position: absolute;
+    }
+    
+}
+@media (max-width:612px){
+    .side-nav{
+        position: relative;
+    }
+    .side-bar{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+    .menu-home{
+        display: none;
     }
 }
