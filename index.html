@@ -132,17 +132,17 @@
                 <ul class="side-bar">
                     <li onclick=hideSidebar()><a href="#"><svg style="fill: red;" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
                     <li  class="menu-home" ><a href="index.html">Home <i style="top:10px" class="fas fa-home"></i></a></li>
-                    <li onclick="toggle('menu-1')" ><a >Academics <i class="fas fa-caret-down"></i></a>
+                    <li><a onclick="toggle('menu-1')" >Academics <i class="fas fa-caret-down"></i></a>
                         <div id="menu-1" class="side-dropdown">
                             <ul>
-                                <li><a href="#">Study @ AOT <i class="fas fa-caret-right"></i></a>
+                                <li><a onclick="toggle('submenu-1')">Study @ AOT <i class="fas fa-caret-right"></i></a>  
                                     <ul id="submenu-1" class="sub-dropdown">
                                         <li><a href="#">Undergraduate Programmes</a></li>
                                         <li><a href="#">Postgraduate Programmes</a></li>
                                     </ul>
                                 </li>
-                                <li><a>Departments <i class="fas fa-caret-right"></i></a>
-                                    <ul class="sub-dropdown-1">
+                                <li><a onclick="toggle('submenu-2')">Departments <i class="fas fa-caret-right"></i></a>
+                                    <ul id="submenu-2" class="sub-dropdown-1">
                                         <li><a href="#">Computer Science and Engineering</a></li>
                                         <li><a href="#">Electronics and Communication Engineering</a></li>
                                         <li><a href="#">Computer Science and Business Studies</a></li>
@@ -154,14 +154,14 @@
                                 <li><a href="#">Program Structure</a></li>
                                 <li><a href="#">Regulations</a></li>
                                 <li><a href="#">Curriculam</a></li>
-                                <li><a href="#">Resources  <i class="fas fa-caret-right"></i></a>
-                                    <ul class="sub-dropdown-3">
+                                <li><a onclick="toggle('submenu-3')">Resources  <i class="fas fa-caret-right"></i></a>
+                                    <ul id="submenu-3" class="sub-dropdown-3">
                                         <li><a href="#">Library</a></li>
                                         <li><a href="#">Moodle</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Admission <i class="fas fa-caret-right"></i></a>
-                                    <ul class="sub-dropdown-4">
+                                <li><a onclick="toggle('submenu-4')">Admission <i class="fas fa-caret-right"></i></a>
+                                    <ul id="submenu-4" class="sub-dropdown-4">
                                         <li><a href="#">UG Admission</a></li>
                                         <li><a href="#">PG Admission</a></li>
                                     </ul>
@@ -169,7 +169,7 @@
                             </ul> 
                         </div>
                     </li>
-                    <li onclick="toggle('menu-2')" ><a>Research <i class="fas fa-caret-down"></i></a>
+                    <li><a onclick="toggle('menu-2')">Research <i class="fas fa-caret-down"></i></a>
                         <div id="menu-2" class="side-dropdown">
                             <ul>
                                 <li><a href="#">Current Research</a></li>
@@ -178,7 +178,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li onclick="toggle('menu-3')"><a>Students <i class="fas fa-caret-down"></i></a>
+                    <li><a onclick="toggle('menu-3')">Students <i class="fas fa-caret-down"></i></a>
                         <div id="menu-3" class="side-dropdown">
                             <ul>
                                 <li><a href="#">Life @ AOT</a></li>
@@ -188,7 +188,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li onclick="toggle('menu-4')" ><a >Faculty<i class="fas fa-caret-down"></i></a>
+                    <li><a onclick="toggle('menu-4')">Faculty<i class="fas fa-caret-down"></i></a>
                         <div id="menu-4" class="side-dropdown">
                             <ul>
                                 <li><a href="#">Faculty List</a></li>
@@ -198,7 +198,7 @@
                         </div>
                     </li>
                     <li ><a>Career @ AOT</a></li>
-                    <li onclick="toggle('menu-5')" ><a >About <i class="fas fa-caret-down"></i></a>
+                    <li><a onclick="toggle('menu-5')" >About <i class="fas fa-caret-down"></i></a>
                         <div id="menu-5" class="side-dropdown">
                             <ul>
                                 <li><a href="#">Overview</a></li>
@@ -217,27 +217,9 @@
                 </ul>
                 
             </nav>
-            <div class="news-container">
-                <div class="title">
-                    <a style="display: flex;" href="#">Announcement <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></a>
-                </div>
+        </div>
         
-                <ul>
-                    <li>
-                        Aot Announcement..........
-                    </li>
-                    
-                    <li>
-                        Breaking news we are going to publish a website.....
-                    </li>
         
-                    <li>
-                        new events are comming soon.... 
-                    </li>
-                </ul>
-            </div>
-
-    </div>  
     
     <script>
         function showSideBar(){
@@ -250,7 +232,12 @@
         }
         function toggle(id){
             var elt =document.getElementById(id);
-            elt.style.display=elt.style.display== 'block' ? 'none':'block';
+            if(elt.style.display=='block'){ 
+                elt.style.display='none';
+            }
+            else{
+                elt.style.display='block';
+            }
         }
         
     </script>
