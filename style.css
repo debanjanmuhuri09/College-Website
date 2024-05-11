@@ -65,7 +65,7 @@ body{
 }
 
 .nav-bar ul li{ /* operational */
-    padding: 10px 30px;
+    padding: 10px 20px;
     position: relative;
 }
 
@@ -80,7 +80,7 @@ body{
     transition: all 0.2s;
 }
 .nav-bar ul li a:hover{ /* op */
-    color:#f3e8be;
+    color:#33110e;
 }
 .nav-bar ul li:hover{  /* op */
     background: #ffcc00;
@@ -99,6 +99,7 @@ body{
     top: 105%;
     background-color: white;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    width: 250px;
 }
 .dropdown ul{ /* op */
     display: block;
@@ -123,9 +124,6 @@ body{
     }
 }
 
-
-
-
 .fas{
     float:right;
     margin-left: 10px;
@@ -137,10 +135,11 @@ body{
     position: absolute;
     margin-top: 0;
     top: 0px;
-    left: 200px;
+    left: 252px;
     z-index: 999;
     background-color: white;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    width: 370px;
 }
 
 .dropdown .sub-dropdown,.dropdown .sub-dropdown-1,.dropdown .sub-dropdown-3,.dropdown .sub-dropdown-4{
@@ -188,7 +187,7 @@ body{
     transform-origin: top center;
 }
 .side-nav ul li{ /* operational */
-    padding: 10px 30px;
+    padding: 10px 20px;
     position: relative;
 }
 
@@ -337,7 +336,7 @@ body{
         width: 100%;
     }
 }
-@media (max-width:1220px){
+@media (max-width:1023px){
     .hideonMobile{
         display: none;
     }
